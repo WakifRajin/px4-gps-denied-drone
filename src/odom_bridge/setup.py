@@ -23,7 +23,8 @@ setup(
     maintainer_email='abd@example.com',
     description=(
         'Bridges PX4 vehicle_odometry <-> ROS 2 odometry/TF, and '
-        'slam_toolbox pose -> PX4 external vision odometry.'
+        'slam_toolbox pose -> PX4 external vision odometry. Also '
+        'provides 3D pose/mapping from the 2D lidar and a frontier explorer.'
     ),
     license='MIT',
     tests_require=['pytest'],
@@ -31,6 +32,10 @@ setup(
         'console_scripts': [
             'odom_bridge_node = odom_bridge.odom_bridge_node:main',
             'vision_odom_bridge = odom_bridge.vision_odom_bridge:main',
+            'pose_3d_node = odom_bridge.pose_3d_node:main',
+            'scan_3d_mapper = odom_bridge.scan_3d_mapper:main',
+            'frontier_explorer = odom_bridge.frontier_explorer:main',
+            'reactive_avoidance = odom_bridge.reactive_avoidance:main',
         ],
     },
 )

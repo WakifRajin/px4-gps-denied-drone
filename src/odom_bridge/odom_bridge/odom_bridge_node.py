@@ -44,8 +44,8 @@ class OdomBridge(Node):
         self.declare_parameter('publish_dynamic_tf', False)
         self.declare_parameter('odom_frame', 'odom')
         self.declare_parameter('base_frame', 'base_link')
-        self.declare_parameter('lidar_link_name', 'link')
-        self.declare_parameter('lidar_offset_xyz', [0.12, 0.0, 0.26])
+        self.declare_parameter('lidar_link_name', 'laser')
+        self.declare_parameter('lidar_offset_xyz', [0.0, 0.0, 0.07])
         self.declare_parameter('lidar_offset_rpy', [0.0, 0.0, 0.0])
 
         self.publish_dynamic_tf = self.get_parameter('publish_dynamic_tf').value

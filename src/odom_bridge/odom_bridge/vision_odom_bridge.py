@@ -41,7 +41,7 @@ class VisionOdomBridge(Node):
 
         self.declare_parameter('map_frame', 'map')
         self.declare_parameter('base_frame', 'base_link')
-        self.declare_parameter('publish_rate_hz', 20.0)
+        self.declare_parameter('publish_rate_hz', 10.0)
 
         self.map_frame  = self.get_parameter('map_frame').value
         self.base_frame = self.get_parameter('base_frame').value
